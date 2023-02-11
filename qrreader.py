@@ -1,15 +1,9 @@
 from PIL import Image
 from pyzbar import pyzbar
 
-filename = "devdata/qr-link.png"
-
 
 def read_qrcode_from_image(filename):
+    """Reads imagefile and returns list of decoded data"""
     img = Image.open(filename)
     output = pyzbar.decode(img)
-    data_as_string = output[0].data.decode("utf-8")
-    print(data_as_string)
-    # return output
-
-
-read_qrcode_from_image(filename)
+    return output

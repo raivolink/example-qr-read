@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation       Reads QR code image from file
+Documentation       Reads QR code image from file. Logs output
 
 Library             qrreader
 
